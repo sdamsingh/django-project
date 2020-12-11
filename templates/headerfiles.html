@@ -1,0 +1,58 @@
+{% load staticfiles %}
+
+<script>
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script>
+<!-- //Meta tag Keywords -->
+
+<!-- Custom-Files -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<!-- Bootstrap css -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<!-- Main css -->
+<link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
+<!-- Font-Awesome-Icons-CSS -->
+<link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<!-- pop-up-box -->
+<link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<!-- menu style -->
+<!-- //Custom-Files -->
+
+<!-- web fonts -->
+<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+      rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+      rel="stylesheet">
+<!-- //web fonts -->
+
+
+{#<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">#}
+<script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'dist/jquery.validate.js' %}"></script>
+<script src="{% static 'myjavascript.js' %}"></script>
+<!-- //js-files -->
+<style>
+    .error {
+        color: red;
+        font-size: 12px;
+        font-weight: normal;
+    }
+
+    .mydiv1 {
+        margin: 10px 0px;
+        padding: 10px;
+        background-color: #efefef;
+    }
+
+    .mydiv1:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 7px #000;
+    }
+</style>

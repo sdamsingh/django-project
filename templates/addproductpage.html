@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'headerfiles.html' %}
+</head>
+<body>
+<div class="container">
+    <div class="col-md-8 col-md-offset-2">
+        <h1 class="text-center">Add Product</h1>
+        <form id="frm_addproduct" method="post" enctype="multipart/form-data">
+
+            <div class="row">
+                <div class="form-group">
+                    <label>Select Category</label>
+                    <select name="categoryname" id="categoryname" class="form-control" data-rule-required="true"
+                            data-msg-required="Please Select Category">
+                    <option value="">Choose</option>
+                        {% for p in mydata %}
+                            <option value="{{ p.categoryname }}">{{ p.categoryname }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Enter Product Name</label>
+                    <input type="text" name="pname" id="pname" class="form-control" data-rule-required="true"
+                           data-msg-required="Please Enter Product Name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Enter Price</label>
+                    <input type="number" name="price" id="price" class="form-control" data-rule-required="true"
+                           data-msg-required="Please Enter Price">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Enter MRP</label>
+                    <input type="number" name="mrp" id="mrp" class="form-control" data-rule-required="true"
+                           data-msg-required="Please Enter MRP">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Enter Description</label>
+                    <textarea name="description" id="description" class="form-control" data-rule-required="true"
+                              data-msg-required="Please Enter Description"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label>Select Photo</label>
+                    <input type="file" name="photo" id="photo" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <input type="button" class="btn btn-success" onclick="addproduct()" value="SUBMIT">
+                </div>
+            </div>
+            <span id="sp1"></span>
+        </form>
+    </div>
+</div>
+</body>
+</html>
